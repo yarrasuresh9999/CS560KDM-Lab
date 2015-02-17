@@ -1,0 +1,149 @@
+.img-container img {
+    width: 100%;
+    height: auto;
+}
+.top-nav {
+    background-color: #404041;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.top-nav a {
+    font-size: 14px;
+    font-weight: 300;
+    text-decoration: underline;
+    color: white;
+}
+.top-nav a:hover {
+    color: #E0E0E0;
+}
+.top-nav .right {
+    float: right;
+    margin-right: 20px;
+}
+.top-nav .left {
+    float: left;
+}
+.top-nav .fork:before {
+    content: ' ';
+    background: url('../images/fork-icon.svg') no-repeat;
+    height: 16px;
+    width: 16px;
+    vertical-align: text-bottom;
+    display: inline-block;
+    margin-right: 3px;
+}
+.header {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+.header h2 {
+    font-weight: 400;
+}
+.header h3 {
+    color: #00b2ef;
+    font-weight: 400;
+}
+.avatar {
+    padding-right: 0px;
+}
+.avatar img {
+    margin-top: 9px;
+}
+.header a {
+    font-size: 14px;
+    font-weight: 300;
+    text-decoration: underline;
+    color: #404041;
+    display: block;
+    margin-left: 20px;
+    margin-bottom: 3px;
+}
+.header a:hover {
+    color: #777677;
+}
+.microphone {
+    margin-top: 35px;
+    width: 100%;
+}
+input[type="file"] {
+    height: 0px;
+    width: 0px;
+    overflow: hidden;
+}
+input[type="file"]:focus + .browse {
+    outline: 5px auto -webkit-focus-ring-color;
+}
+.micText {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #999999;
+    text-align: center;
+}
+.instructions {
+    margin-bottom: 10px;
+}
+.microphone {
+    margin-top: 35px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+.micButton {
+    background: url('../images/microphone.svg') no-repeat;
+    width: 150px;
+    height: 150px;
+    margin: 0px auto;
+    cursor: pointer;
+}
+.micButton.recording {
+    background: url('../images/microphoneServiceRunning.svg') no-repeat;
+}
+.micButton.recording:hover {
+    background: url('../images/microphoneServiceRunning.svg') no-repeat;
+}
+.micButton-preload {
+    display: none;
+}
+.micButton-preload, .micButton:hover {
+    background: url('../images/microphoneHighlight.svg') no-repeat;
+}
+.micButton:hover .micText {
+    text-decoration: underline;
+}
+.errorMsg {
+    font-weight: bold;
+    color: red;
+}
+.start-over {
+    position: absolute;
+    top: 35px;
+    right: 15px;
+}
+
+.overlay-container {
+  position: relative;
+}
+
+.unsupported-overlay {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(250, 250, 250, 0.96);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+}
+.unsupported-overlay h4 {
+  color: #222;
+  margin: auto;
+  width: 400px;
+  height: 36px;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+}

@@ -1,0 +1,38 @@
+//- index.jade
+extends ./layout.jade
+
+block row-content
+
+  div.row
+    div.col-lg-6.col-md-6.col-xs-12
+      h2 Transcribe from Streaming Audio
+      div.well.overlay-container
+        div.unsupported-overlay
+          h4 This application only works in recent versions of 
+            a(href="https://www.google.com/intl/en/chrome/browser/desktop/", target="_blank") Chrome
+            |  supporting HTML5 audio capture.
+        div.row
+          div.col-lg-12.col-md-12.col-xs-12
+            p.form-group For best results, please use a broadband internet connection.
+              | Try to avoid the built-in mic on your laptop by using a close talking
+              | microphone (e.g. from a headset) when possible, and tweak the microphone
+              | settings on your OS if necessary.  To test if your settings are correct,
+              | please say "one two three four five." This should be recognized flawlessly.
+            div.microphone
+              div.micButton-preload
+              div.micButton
+              p.micText Press to start speaking
+        div.row
+          div.col-lg-12.col-md-12.col-xs-12
+            canvas#meter(width='100%' height='30')
+
+    div.col-lg-6.col-md-6.col-xs-12
+      h2 Output
+      div.well
+        div.form-group.row.loading.text-center(style='display:none')
+          img(src='images/watson.gif')
+        div.errorMsg
+        div#text
+  div.row
+    div.help-block.text-center
+      small This application only works in recent versions of Chrome supporting HTML5 audio capture
