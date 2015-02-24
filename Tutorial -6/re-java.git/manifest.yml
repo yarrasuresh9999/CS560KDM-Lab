@@ -1,0 +1,6 @@
+applications:
+- services:
+  - re-service
+  name: re-java-rekdmsg8
+  path: webApp.war
+  memory: 512M
