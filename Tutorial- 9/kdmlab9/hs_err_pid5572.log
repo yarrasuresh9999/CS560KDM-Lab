@@ -1,0 +1,122 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  Internal Error (virtualspace.cpp:125), pid=5572, tid=1316
+#  fatal error: os::release_memory failed
+#
+# JRE version:  (7.0_75-b13) (build )
+# Java VM: Java HotSpot(TM) Client VM (24.75-b04 mixed mode windows-x86 )
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.sun.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0133c800):  JavaThread "Unknown thread" [_thread_in_vm, id=1316, stack(0x01350000,0x013a0000)]
+
+Stack: [0x01350000,0x013a0000],  sp=0x0139f2dc,  free space=316k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x191164]
+V  [jvm.dll+0x18ad96]
+V  [jvm.dll+0x166e4c]
+V  [jvm.dll+0x16733b]
+V  [jvm.dll+0x8ab86]
+V  [jvm.dll+0x88656]
+V  [jvm.dll+0x8733e]
+V  [jvm.dll+0x917f3]
+V  [jvm.dll+0x140814]
+V  [jvm.dll+0x16337c]
+V  [jvm.dll+0xca74f]
+C  [javaw.exe+0x13ce]
+C  [javaw.exe+0x1e40]
+C  [javaw.exe+0xa601]
+C  [javaw.exe+0xa68b]
+C  [kernel32.dll+0x4ee1c]
+C  [ntdll.dll+0x637eb]
+C  [ntdll.dll+0x637be]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x0133c800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=1316, stack(0x01350000,0x013a0000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x011e0000 - 0x0120f000 	D:\Program Files\Java\jdk1.7.0_75\bin\javaw.exe
+0x77c40000 - 0x77d7c000 	C:\Windows\SYSTEM32\ntdll.dll
+0x76590000 - 0x76664000 	C:\Windows\system32\kernel32.dll
+0x75990000 - 0x759db000 	C:\Windows\system32\KERNELBASE.dll
+0x764f0000 - 0x76590000 	C:\Windows\system32\ADVAPI32.dll
+0x75ff0000 - 0x7609c000 	C:\Windows\system32\msvcrt.dll
+0x76430000 - 0x76449000 	C:\Windows\SYSTEM32\sechost.dll
+0x77dc0000 - 0x77e62000 	C:\Windows\system32\RPCRT4.dll
+0x75da0000 - 0x75e69000 	C:\Windows\system32\USER32.dll
+0x77750000 - 0x7779e000 	C:\Windows\system32\GDI32.dll
+0x77db0000 - 0x77dba000 	C:\Windows\system32\LPK.dll
+0x76450000 - 0x764ed000 	C:\Windows\system32\USP10.dll
+0x747e0000 - 0x7497e000 	C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.17514_none_41e6975e2bd6f2b2\COMCTL32.dll
+0x75cb0000 - 0x75d07000 	C:\Windows\system32\SHLWAPI.dll
+0x77d90000 - 0x77daf000 	C:\Windows\system32\IMM32.DLL
+0x77a30000 - 0x77afc000 	C:\Windows\system32\MSCTF.dll
+0x5bcd0000 - 0x5bd8f000 	D:\Program Files\Java\jdk1.7.0_75\jre\bin\msvcr100.dll
+0x55760000 - 0x55ae9000 	D:\Program Files\Java\jdk1.7.0_75\jre\bin\client\jvm.dll
+0x6edb0000 - 0x6edb7000 	C:\Windows\system32\WSOCK32.dll
+0x76670000 - 0x766a5000 	C:\Windows\system32\WS2_32.dll
+0x75d90000 - 0x75d96000 	C:\Windows\system32\NSI.dll
+0x75ab0000 - 0x75ae2000 	C:\Windows\system32\WINMM.dll
+0x77d80000 - 0x77d85000 	C:\Windows\system32\PSAPI.DLL
+0x6f020000 - 0x6f02c000 	D:\Program Files\Java\jdk1.7.0_75\jre\bin\verify.dll
+0x6cff0000 - 0x6d010000 	D:\Program Files\Java\jdk1.7.0_75\jre\bin\java.dll
+0x6cf90000 - 0x6cfa3000 	D:\Program Files\Java\jdk1.7.0_75\jre\bin\zip.dll
+0x71370000 - 0x7145b000 	C:\Windows\system32\dbghelp.dll
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 
+java_command: Main test
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=D:\Program Files\java\jdk1.6.0_10\bin\
+CLASSPATH=F:\JADE-all-3.7\JADE-bin-3.7\jade\lib\http.jar;F:\JADE-all-3.7\JADE-bin-3.7\jade\lib\iiop.jar;F:\JADE-all-3.7\JADE-bin-3.7\jade\lib\jade.jar;F:\JADE-all-3.7\JADE-bin-3.7\jade\lib\jadeTools.jar;F:\JADE-all-3.7\JADE-bin-3.7\jade\lib\commons-codec\commons-codec-1.3.jarD:\Program Files\java\jdk1.6.0_10\bin\/jre/lib;D:\Program Files\java\jdk1.6.0_10\bin\\lib\tools.jar;D:\Program Files\java\jdk1.6.0_10\bin\\lib\dt.jar;C:\Users\shenfc\Downloads\Jess71p2 (2)\Jess71p2\lib\jess.jar;E:\Dropbox\WWW2014\UBA\uba1.7\classes
+PATH=D:/Program Files/Java/jre7/bin/client;D:/Program Files/Java/jre7/bin;D:/Program Files/Java/jre7/lib/i386;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Microsoft SQL Server\90\Tools\binn\;D:\Program Files\java\jre6\/bin;C:\Program Files\Internet Explorer;D:\Program Files\TortoiseSVN\bin;D:\Program Files\Graphviz2.30\bin;E:\Program Files\MiKTeX 2.9\miktex\bin\;D:\Program Files\java\jdk1.6.0_10\bin\/lib;D:\Program Files\java\jdk1.6.0_10\bin\/jre/lib;D:\Program Files\java\jdk1.6.0_10\bin\\lib\tools.jar;D:\Program Files\java\jdk1.6.0_10\bin\\lib\dt.jar;C:\Program Files\Windows Live\Shared;C:\Program Files\MySQL\MySQL Utilities 1.3.6\;D:\Program Files\Java\jre6\bin\client;D:\Program Files\Java\jdk1.7.0_75\bin;D:\Program Files\CloudFoundry;D:\Program Files\SSH Communications Security\SSH Secure Shell;D:\apache-ant-1.8.2-bin\apache-ant-1.8.2\/bin;D:\apache-ant-1.8.2-bin\apache-ant-1.8.2\/lib;D:\Program Files\java\jdk1.6.0_10\bin\/lib;D:\Program Files\java\jdk1.6.0_10\bin\/bin;D:\Program Files\Java\jre6\bin\client;E:\eclipse-SDK-4.2.2-win32\eclipse;
+USERNAME=shenfc
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=x86 Family 6 Model 37 Stepping 5, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 Build 7601 Service Pack 1
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 37 stepping 5, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, aes, ht, tsc, tscinvbit
+
+Memory: 4k page, physical 3067568k(301004k free), swap 3065820k(4960k free)
+
+vm_info: Java HotSpot(TM) Client VM (24.75-b04) for windows-x86 JRE (1.7.0_75-b13), built on Dec 18 2014 17:06:46 by "java_re" with unknown MS VC++:1600
+
+time: Tue Mar 10 13:36:24 2015
+elapsed time: 3 seconds
+

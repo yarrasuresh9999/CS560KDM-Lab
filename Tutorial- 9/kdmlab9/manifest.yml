@@ -1,0 +1,8 @@
+applications:
+- disk_quota: 1024M
+  host: kdmlab9sg8
+  name: kdmlab9sg8
+  path: webApp.war
+  domain: mybluemix.net
+  instances: 1
+  memory: 512M

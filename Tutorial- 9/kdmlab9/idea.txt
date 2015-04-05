@@ -1,0 +1,116 @@
+
+Jack Hebert
+5/16/07
+
+Things to do:
+1. Cluster news articles - Not super important. Would help, but can probably pass for now.
+2. Entity resolution - Somewhat important. Should boost relation recall by resolving pronouns.
+
+3. Output relation tuples per article - SUPER IMPORTANT!!!
+4. Wordnet spreading, PP+ADJ splitting - Fairly important, should help us merge relations.
+5. Article merging, collisions from (5) suggest merging - Fairly important.
+6. Advanced fact merging, re-phrasing - Important for later.
+
+
+
+
+
+
+
+
+
+
+References:
+Automatic Paraphrase Acquisition from News Articles - http://citeseer.ist.psu.edu/555041.html
+Open Information Extraction from the Web (TextRunner) - http://turing.cs.washington.edu/papers/ijcai07.pdf
+
+
+Jack Hebert
+5/6/07
+
+1. Simple python script to gather news items.
+
+2. OpenNLP can tag parts of speech and do some NP chunking.
+   Follow TextRunner style of considering all pairs of base NP's and relation (words) between them.
+   - Attempt to filter on length, only pronoun NPs, some sorts of clausal boundaries.
+
+3. Do something cool with wordnet to generalize extracted relation -> (set of potential generalized relations).
+
+4. Look for collisions between relations as possible need to merge facts. Mark as mergable if appropriate.
+
+
+
+
+
+
+
+
+
+
+Jack Hebert
+5/4/07
+
+1. Download current news articles from a set of RSS feeds.
+   These can be gathered manually, downloaded periodically.
+
+2. Use Stanford parser to break each article into phrases, small Know-it-all like facts.
+   Want small basic facts initially. Mark which larger phrases they came from.
+
+3. Use Wordnet to merge similar facts via synonyms and ...
+   This can be done with the cluser if needed.
+     Basically each fact contains a set of tokens.
+     For each token, look at facts it is present in. Emit facts that match.
+     Consolidate matching facts.
+
+4. Use facts that are present in several articles to build up important phrases/facts in original articles.
+   Take set of matching facts and find larger phrases from (2) which have been best verified.
+
+5. Display with snazzienss.
+   Index from (articles -> verified facts).
+   Can combine with tradition index from (words -> articles).
+
+
+
+Email to Mike Cafarella - 
+****
+Mike,
+
+I've got a project idea that I would love some advice on, given that KnowItAll provided some inspiration for it. The project will attempt to extract basic facts from news articles. Then for a given headline / cluster of news articles, we can provide a set of facts that have a high probability of being accurate or important.
+
+So to do this, it seems necessary to first extract small tuples or facts from each news article (this seems like KnowItAll), and then merge them using synonyms or stemming or ... (I am more comfortable with this, and have access to the Hadoop cluster for cse490h).
+
+So do you have any thoughts / specific advise for parsing out small phrases? I will read through the latest KnowItAll papers, but what is the best way to do this? Should we be creating parse trees? or are parts of speech enough? or just segmenting phrases?
+
+Thanks,
+Jack Hebert
+****
+
+
+Response -
+****
+Hi Jack,
+
+If you're just looking to extract named-entities (people, places, things),
+it's a little tough to get right, but the steps are clear.  You can use a
+combination of text classification and an off-the-shelf parser to find
+these things.  (And maybe a dictionary, to disqualify in-dict words.)
+
+If you want real triple-style facts ("bush/invaded/iraq") then you'll need
+to do something similar to TextRunner (in IJCAI 2007).  This kind of
+"open information extraction" took us a whole research paper to get
+working.  It's interesting to pursue this, but read the TR paper before
+you get going.  (It has details on all the linguistic stuff we used.)
+
+Another option is to do named-entity extraction plus a
+constrained-vocabulary set of verbs/predicates.  You might be able to be
+lighter on the linguistic machinery, and still get most of the interesting
+stuff.
+
+Does this help at all?
+
+I'm not in the department much this week, but I'm happy to answer
+more questions via mail...
+
+--Mike
+****
+
